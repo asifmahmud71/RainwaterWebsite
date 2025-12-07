@@ -9,7 +9,7 @@ function HomePage({ setCurrentPage }) {
     let mounted = true;
     const fetchCount = async () => {
       try {
-        const res = await fetch(process.env.API_URL+"/registrations");
+        const res = await fetch(import.meta.VITE_API_URL+"/registrations");
         const json = await res.json();
         if (!mounted) return;
         if (json && json.success && Array.isArray(json.data)) {

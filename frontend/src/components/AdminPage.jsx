@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Trash2, Eye, EyeOff, LogOut, Users } from 'lucide-react';
 import ErrorAlert from './ErrorAlert';
 
-const API_URL = process.env.API_URL || 'http://localhost:5000/api';
+const VITE_API_URL = import.meta.VITE_API_URL || 'http://localhost:5000/api';
 
 function AdminPage() {
   const [authenticated, setAuthenticated] = useState(false);
@@ -18,7 +18,7 @@ function AdminPage() {
     setError('');
     
     try {
-      const response = await fetch(`${API_URL}/admin/login`, {
+      const response = await fetch(`${VITE_API_URL}/admin/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ password })
@@ -39,7 +39,7 @@ function AdminPage() {
 
   const fetchRegistrations = async () => {
     try {
-      const response = await fetch(`${API_URL}/registrations`);
+      const response = await fetch(`${VITE_API_URL}/registrations`);
       const data = await response.json();
       if (data.success) setRegistrations(data.data);
     } catch (err) {
@@ -50,7 +50,7 @@ function AdminPage() {
   const deleteRegistration = async (id) => {
     if (window.confirm('Are you sure you want to delete this registration?')) {
       try {
-        const response = await fetch(`${API_URL}/registrations/${id}`, {
+        const response = await fetch(`${VITE_API_URL}/registrations/${id}`, {
           method: 'DELETE'
         });
         const data = await response.json();
