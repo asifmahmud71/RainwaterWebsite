@@ -5,7 +5,7 @@ import ErrorAlert from './ErrorAlert';
 const VITE_API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
 
 function AdminPage() {
-  const [authenticated, setAuthenticated] = useState(false);
+  const [authenticated, setAuthenticated] = useState(true);
   const [password, setPassword] = useState('');
   const [registrations, setRegistrations] = useState([]);
   const [loading, setLoading] = useState(false);
