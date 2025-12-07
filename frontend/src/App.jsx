@@ -7,7 +7,7 @@ import AdminPage from './components/AdminPage';
 
 function App() {
   u
-  const [currentPage, setCurrentPage] = useState(typeof window != undefined && window.location.search ? window.location.search?.replace('?',''):'home');
+  const [currentPage, setCurrentPage] = useState('faqs');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
