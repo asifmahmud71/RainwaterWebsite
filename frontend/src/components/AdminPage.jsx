@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Trash2, Eye, EyeOff, LogOut, Users } from 'lucide-react';
 import ErrorAlert from './ErrorAlert';
 
-const API_URL = 'http://localhost:5000/api';
+const API_URL = process.env.API_URL || 'http://localhost:5000/api';
 
 function AdminPage() {
   const [authenticated, setAuthenticated] = useState(false);

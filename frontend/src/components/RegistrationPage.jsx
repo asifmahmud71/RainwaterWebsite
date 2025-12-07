@@ -39,7 +39,7 @@ function RegistrationPage() {
 
     setLoading(true);
     try {
-      const response = await fetch('http://localhost:5000/api/registrations', {
+      const response = await fetch(process.env.API_URL+"/registration", {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
