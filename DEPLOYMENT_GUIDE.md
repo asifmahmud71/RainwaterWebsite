@@ -47,11 +47,11 @@ MONGODB_URI=mongodb://localhost:27017/rainwater_convention
 FRONTEND_URL=http://localhost:5173
 JWT_SECRET=your_super_secret_key
 
-4. Start MongoDB
-mongod
+4. Start MongoDB:
+   net start MongoDB
 
-5. Start Backend
-npm run dev
+6. Start Backend:
+npm run dev / npm start
 
 Backend URL:
 http://localhost:5000
@@ -75,14 +75,6 @@ npm run dev
 
 Frontend URL:
 http://localhost:5173
-
-==================================================
-
-Website Pages
-Home        → /
-FAQs        → /faqs
-Register    → /register
-Admin Panel → /admin
 
 ==================================================
 
@@ -123,6 +115,3 @@ npm run dev
 
 ==================================================
 
-Conclusion
-
-This project can now be executed fully on a local machine without dependency on cloud services.
