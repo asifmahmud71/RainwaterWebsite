@@ -32,8 +32,7 @@ This project was developed as part of an academic assignment to demonstrate full
 
 Detailed step-by-step local deployment instructions are available in:
 
-📄 **`README.txt` (Deployment Guide)**  
-(or rename it to `README.md` after download)
+📄 **DEPLOYMENT_GUIDE.md**
 
 ---
 
